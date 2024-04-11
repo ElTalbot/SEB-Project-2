@@ -39,7 +39,7 @@ Insomnia was used to decipher the effectiveness of the API and to make sure that
 Figma was used to wireframe the design of our character board as well as define the potential user journeys.
 We also used Figma to pseudocode the potential functions, event listeners and array methods that may be required to build our MVP.
 
-![Figma Wireframes](<src/README Assets/Figma.png>)
+![Figma Wireframes](src/README Assets/Figma.png)
 
 ### GitHub
 
