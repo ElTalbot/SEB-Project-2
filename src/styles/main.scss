@@ -64,6 +64,16 @@ body {
     margin-top: 100px;
   }
 }
+@media screen and (max-width: 800px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .filtered {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 // ? Import bulma, all customizations should live above this line.
 @import "../../node_modules/bulma/bulma.sass";
