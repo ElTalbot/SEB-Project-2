@@ -4,10 +4,10 @@
 
 Our Disney Characters API provides the user with the opportunity to browse a list of Disney Character Cards.
 
+## Concept
+
 Each Character Card is a clickable element that if selected provides the user with a more detailed character bio - all of which is rendered from our chosen API ‘INSERT DISNEY API’  
 The addition of a search bar and drop-down offers the user the ability to tailor their experience and retrieve a more refined result.
-
-## Concept
 
 A user friendly, simple platform providing the user with key information around a vast array of Disney Characters - be it a general overview or a more detailed bio.
 
@@ -39,7 +39,7 @@ Insomnia was used to decipher the effectiveness of the API and to make sure that
 Figma was used to wireframe the design of our character board as well as define the potential user journeys.
 We also used Figma to pseudocode the potential functions, event listeners and array methods that may be required to build our MVP.
 
-![Figma Wireframes](src/README Assets/Figma.png)
+![Figma Wireframes](<src/README Assets/Figma.png>)
 
 ### GitHub
 
@@ -47,11 +47,11 @@ Setting up individual branches from our newly created GitHub repository meant bo
 
 ### Bulma
 
-The integration of Bulma in React meant we were able to utilise this styling framework to build our project
+The integration of Bulma in React meant we were able to utilise this styling framework to build our project.
 
 ## Time Frame
 
-This was a collaborative paired project that was to be completed in 2 days. It was a project designed to consolidate everything we have learned about React and APIs
+This was a collaborative paired project that was to be completed in 2 days. It was a project designed to consolidate everything we have learned about React and APIs.
 
 ## Instructional Team Brief
 
@@ -70,18 +70,20 @@ The initial brief as seen below outlines the deliverables, challenges and sugges
 Prior to collaborating we were given the opportunity to research potential APIs and using both Insomnia and VS Code to consolidate the API and make sure the data could be effectively fetched and used.
 This also gave us the chance to think about ideas for the project and how best to use the API.
 
-## Planning
+### Planning
 
 ### Collaboration
 
-On being assigned a partner we were given time to discuss each others research and to finalise our project idea - both my partner and I seemed to be on a similar wavelength. My partner proposed the idea of a character board and from looking at a variety of APIs I suggested the idea of it being a Disney Character Board.
+On being assigned a partner we were given time to discuss each others research and to finalise our project idea, both my partner and I seemed to be on a similar wavelength. My partner proposed the idea of a character board and from looking at a variety of APIs, I suggested the idea of it being a Disney Character Board.
 
-Following a more in depth collaborative research and discussion around the Disney API we decided to settle on the Disney board idea.
+Following a more in depth collaborative research and discussion around the Disney API, we decided to settle on the Disney board idea.
+
+As a collaboration we followed a more driver, navigator approach to coding our project - Jamie was the driver for the API implementation and the building of the Character page. My main role as a driver along with minor bug fixes was to style the board using Bulma.
 
 ### Pseudocode
 
 Our next step was to pseudocode the look, feel and function of our minimal viable product(MVP).
-This also gave us the opportunity to discuss the potential in-app React elements, functions, Array methods and event listeners required to build our MVP
+This also gave us the opportunity to discuss the potential in-app React elements, functions, array methods and event listeners required to build our MVP.
 
 ![Figma Pseudocode](<src/README Assets/Figma Psuedocode.png>)
 
@@ -89,11 +91,11 @@ This also gave us the opportunity to discuss the potential in-app React elements
 
 #### <ins>First Step - Components and Routers</ins>
 
-Using the layout of the design as a guide we created a new component for each part of the character board - these components would hold the code that would define the functions they perform.
+Using the layout of the design as a guide we created a new component for each part of the character board, these components would hold the code that would define the functions they perform.
 
 ![Components folder](<src/README Assets/Components.png>)
 
-It was then important to make sure that each component could be navigated to and data could be translated and passed between which was made possible by the "react-router-dom" - by importing the individual components into the App.tsx, the path to that component could be defined (see below for examples of importing components and using the Router tool)
+It was then important to make sure that each component could be navigated to and data could be translated and passed between which was made possible by the "react-router-dom" - by importing the individual components into the App.tsx, the path to that component could be defined (see below for examples of importing components and using the Router tool).
 
 ![Routes and navigation](<src/README Assets/Routes.png>)
 
@@ -116,19 +118,27 @@ After fetching the data, we used a `.map` method to iterate through the `charact
 
 ![.map through an array](<src/README Assets/map.png>)
 
-### Challenges
+## Challenges
 
 A number of challenges arose throughout this project, on clicking on one of the character cards our plan was for this to display a more detailed bio of each character. The main hurdle here was retrieving data that sat inside of an array inside of an object inside of an array.
-The initial data displayed included name, id and image all of which were strings which when fetched displayed using the aforementioned method. However due to the films and tv shows being inside of another array when calling the API we needed to use the `.map` method again to iterate through the specific film and tvShow arrays to access this data and be able to display it onto the card.
+The initial data displayed included name, id and image all of which were strings which when fetched displayed using the aforementioned method. However, due to the films and tv shows being inside of another array when calling the API we needed to use the `.map` method, again to iterate through the specific film and tvShow arrays. This then accessed the data and displayed it onto the card.
 
-In addition to the card needed to display the specific data associated with the character card clicked on the `CharacterList` page - this became problematic.
+In addition to this, when a character card was clicked on it needed to open a new page and display the specific data associated with that character card, this became problematic.
+
 In order to achieve this (as seen below) we carried out another fetch request that runs when the page loads (which only occurs when the aforementioned character card is clicked). However, the difference being we used the `id` of the character data to pass through the right information associated with the character clicked on.
 
 ![Show character bio](<src/README Assets/Show character.png>)
 
 ### Bulma
 
-Being a new user of Bulma was a stumbling block during this project, it is a really useful CSS framework that once mastered can be extremely beneficial however, due to my lack of experience I felt that the use of Bulma meant the time spent on additional features was limited. On reflection, I may have resorted to basic CSS so that other features could have been focussed on - and I could have independently worked on gaining experience with Bulma and used it in projects further down the line.
+Being a new user of Bulma was a stumbling block during this project, it is a really useful CSS framework that once mastered can be extremely beneficial however, due to my lack of experience I felt that the use of Bulma meant the time spent on additional features was limited.
+On reflection, I may have resorted to basic CSS so that other features could have been focussed on - and I could have independently worked on gaining experience with Bulma and used it in projects further down the line.
+
+## Wins
+
+I believe my personal win during this project was the use of user stories to guide the process of building the Character Board.
+
+With minimal experience in writing and implementing user stories it was slightly alien to me to use them for this project however, collaborating with Jamie prior coding anything, to define the user stories was incredibly useful. This gave us a focus and an MVP we knew we could work towards and when reviewing our code further into the process we were able to amend and adjust as necessary. This ensured that we remained on target to to achieve our MVP.
 
 ## Key Learnings and Takeaways
 
@@ -163,9 +173,9 @@ The main 2 additional features we included within our project was a search bar a
 
 The addition of the search bar alone was achieved by a `React.useState()` hook,
 
-![Show character bio](<src/README Assets/SearchState.png>)
+the event of a user typing in the input field calls the `handleChange` function that sets the `search` variable to the value within the input (as seen below)
 
-the event of a user typing in the input field calls the `handleChange` function that sets the `search` variable to the value within the input.
+![Show character bio](<src/README Assets/SearchState.png>)
 
 ![Show character bio](<src/README Assets/handleChange.png>)
 
@@ -176,27 +186,23 @@ This then calls the `filterCharacters()` function that return the character data
 The addition of the dropdown followed a similar process, using a `React.useState()` hook
 and the event of the value within the dropdown changing meant the `function handleChangeFilm()` was called and the value was updated and set to the current value in the dropdown.
 
-![Show character bio](<src/README Assets/handleChangeFilm.png>)
+The idea was for this to then in turn map through the hard coded data values we predefined and pull in the character that matched the value in the dropdown. However, the problem was we were trying to call 2 `useEffect()` hooks that caused an error.
 
-The idea was for this to then in turn map through the hard coded data values we predefined and pull in the character that matched the value in the dropdown,
+To mitigate this, we added an argument to the hook (see below) enabling us to define when this hook was called and in this case it was only called when the selectedFilm `value` in the dropdown changed (this code can be seen below)
+
+![Show character bio](<src/README Assets/handleChangeFilm.png>)
 
 ![mapping through films](<src/README Assets/Film map.png>)
 
 ![Hardcoded films](<src/README Assets/films.png>)
 
-however, the problem was we were trying to call 2 `useEffect()` hooks that caused an error.
-
 ![Show character bio](<src/README Assets/2 useEffect.png>)
-
-To mitigate this, we added an argument to the hook (see below) enabling us to define when this hook was called and in this case it was only called when the selectedFilm `value` in the dropdown changed.
 
 ![Show character bio](<src/README Assets/2 useEffect argument.png>)
 
 #### Feature Interaction
 
-The interaction between the search bar and dropdown came into question on reviewing the potential user journeys
-
-These in particular ..
+The interaction between the search bar and dropdown came into question on reviewing the potential user journeys. The list below display the user stories of our MVP that we wanted to meet.
 
 <ins>As a user I want .. </ins>
 
@@ -205,7 +211,7 @@ These in particular ..
 3. Search through characters within the film selected in the drop-down
 4. Be able to Return to searching the whole data set after searching through a film
 
-In order for the user to use the search bar to search the characters in the film selected in the dropdown we needed the 2 features to interact and for the characters to filter depending on both `handleChange` functions. To do this we used the && and || operators (see below)
+In order for the user to use the search bar to search the characters in the film selected in the dropdown we needed the 2 features to interact and for the characters to filter depending on both `handleChange` functions. To do this we used the && and || operators (see below).
 
 The `filterCharacters()` function filters the characters data based on the search criteria provided through the `search` and `value` variables.
 
