@@ -13,7 +13,7 @@ A user friendly, simple platform providing the user with key information around 
 
 ## Game Link
 
-[Disney Character Board](https://seb-78project2.netlify.app/character/18)
+[Disney Character Board](https://seb-78project2.netlify.app/)
 
 ## Technology Used
 
